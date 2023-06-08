@@ -1,0 +1,26 @@
+.form {
+    
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+  }
+  .input {
+    padding: 10px;
+    font-size: 15px;
+    width: 40%;
+    margin-bottom: 30px;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+  .span {
+    margin-bottom: 10px;
+  }
+  .button {
+    display: block;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 182, 182);
+  }
