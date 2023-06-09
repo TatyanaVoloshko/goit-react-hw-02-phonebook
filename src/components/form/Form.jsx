@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import css from './form.module.css';
 import PropTypes from 'prop-types';
 
@@ -14,7 +14,6 @@ export class Form extends Component {
     e.preventDefault();
     this.props.onSubmit(this.state);
     this.reset();
-    return this.state;
   };
   reset = () =>
     this.setState({

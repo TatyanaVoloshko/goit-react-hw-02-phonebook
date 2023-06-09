@@ -25,7 +25,7 @@ export class App extends Component {
       id: `${nanoid()}`,
       number: `${number}`,
     };
-    const addCheck = contacts.find(({ name }) => name.includes(nameToAdd));
+    const addCheck = contacts.find(({ name }) => name.toLowerCase() === nameToAdd.toLowerCase());
     if (!addCheck) {
       contacts.push(person);
       this.setState({
