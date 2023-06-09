@@ -20,17 +20,14 @@ export class App extends Component {
   submitCathcer = ({ name, number }) => {
     const contacts = [...this.state.contacts];
     const nameToAdd = name;
-    const person = {
+    const newContact = {
       name: `${name}`,
       id: `${nanoid()}`,
       number: `${number}`,
     };
     const addCheck = contacts.find(({ name }) => name.toLowerCase() === nameToAdd.toLowerCase());
     if (!addCheck) {
-      contacts.push(person);
-      this.setState({
-        contacts: contacts,
-      });
+      this.setState(prevState=>({contacts: [...prevState.contacts, newContact]}));
     } else {
       alert(`${nameToAdd} is already in contacts`);
     }
